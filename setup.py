@@ -19,10 +19,10 @@ setup_kwargs: Dict[str, Any] = dict(
     version="0.0.0",
     author="Chen Wang",
     author_email="",
-    description="Package deploy",
+    description="",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    python_requires=">=3.11",
+    python_requires=">=3.10",
     install_requires=install_requires,
     entry_points={
         'console_scripts': []
