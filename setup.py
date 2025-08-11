@@ -7,15 +7,16 @@ from setuptools import setup, find_packages
 from package_deploy.python_build import get_kwargs
 
 
-PACKAGE_NAME = ""
 SRC_DIR = "src"
+IMPORT_NAME  = ""
+DISTRIBUTION_NAME = ""
 
 
 with open("requirements.txt") as f:
     install_requires = [line.strip() for line in f if line.strip() and not line.startswith("#")]
 
 setup_kwargs: Dict[str, Any] = dict(
-    name=PACKAGE_NAME,
+    name=DISTRIBUTION_NAME,
     version="0.0.0",
     author="Chen Wang",
     author_email="",
@@ -32,5 +33,5 @@ setup_kwargs: Dict[str, Any] = dict(
     include_package_data=True,
 )
 
-setup_kwargs.update(get_kwargs(PACKAGE_NAME, src_dir=SRC_DIR))
+setup_kwargs.update(get_kwargs(IMPORT_NAME, src_dir=SRC_DIR))
 setup(**setup_kwargs)
